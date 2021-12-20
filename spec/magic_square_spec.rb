@@ -1,4 +1,4 @@
-require File.expand_path('code/magic_square')
+require_relative '../code/magic_square'
 require 'rspec'
 
 describe MagicSquare do

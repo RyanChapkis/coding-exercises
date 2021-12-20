@@ -17,6 +17,7 @@ class MagicSquare
         row_sum += square[i][j]
       end
       if row_sum != prime_diagonal_sum
+        puts "This is not a magic square."
         return false
       end 
     end
@@ -28,10 +29,11 @@ class MagicSquare
         col_sum += square[j][i]
       end  
       if prime_diagonal_sum != col_sum
+        puts "This is not a magic square."
         return false
       end  
     end  
-
+    puts "This IS a magic square"
     return true
 
   end
