@@ -1,4 +1,5 @@
-require File.expand_path('code/puppies')
+require_relative '../code/puppies'
+require 'rspec'
 
 describe Puppies do
   describe '.parse' do

@@ -1,4 +1,5 @@
 require File.expand_path('code/magic_square')
+require 'rspec'
 
 describe MagicSquare do
   describe '.validate' do
