@@ -1,9 +1,9 @@
-require File.expand_path('code/hotel_parser')
+require_relative '../code/hotel_parser'
+require 'rspec'
 
 describe HotelParser do
   describe '.parse' do
     subject { HotelParser.parse(File.expand_path('data/hotel.yaml')) }
-
     it 'allows accessing via []' do
       expect(subject['hotels'].last['rooms'].first['amenities'].last).to eq 'Pool'
     end
@@ -21,3 +21,5 @@ describe HotelParser do
     end
   end
 end
+
+
