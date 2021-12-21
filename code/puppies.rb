@@ -13,9 +13,6 @@ class Puppies
   DIRECTORY = ::File.join(::File.dirname(__FILE__), '../data')
 
   def self.parse
-  end   
-
-  def scraper
     url = "../data/paws.html"
     doc = File.open(url) { |f| Nokogiri::HTML(f) }
     dogs = Array.new
@@ -42,12 +39,10 @@ class Puppies
             end 
         end
         page += 1
+        
     end
     return dogs
-    byebug
-  end
+    #byebug
+  end   
+  
 end
-
-pup = Puppies.new
-
-puts pup.scraper
